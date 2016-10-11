@@ -17,8 +17,6 @@ class App extends Component {
   //     </p>
   //   </div>
 
-
-
   render() {
     return (
       <div className="App">

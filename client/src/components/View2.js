@@ -1,13 +1,22 @@
 import React, { Component } from 'react';
 
-class App extends Component {
+class View2 extends Component {
+  constructor() {
+    super();
+    this.state = {
+      toggle: 1
+    }
+  }
+  something() {
+
+  }
   render() {
     return (
       <div>
-        <h1>view2</h1>
+      View2
       </div>
     );
   }
 }
 
-export default App;
+export default View2;
