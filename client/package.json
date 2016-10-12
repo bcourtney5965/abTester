@@ -9,6 +9,7 @@
     "css-toggle-switch": "^4.0.2",
     "react": "^15.3.2",
     "react-bootstrap": "^0.30.5",
+    "react-data-components": "^1.1.0",
     "react-dom": "^15.3.2",
     "react-router": "^2.8.1"
   },

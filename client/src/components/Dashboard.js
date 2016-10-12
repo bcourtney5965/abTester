@@ -1,7 +1,24 @@
 import React, { Component } from 'react';
+import { DataTable } from 'react-data-components';
+
 
 class Dashboard extends Component {
+
+
+
   render() {
+    var tableColumns = [
+        { title: 'Name', prop: 'name' },
+        { title: 'City', prop: 'city' },
+        { title: 'Street address', prop: 'street' },
+        { title: 'Phone', prop: 'phone', defaultContent: '<no phone>' }
+      ];
+
+    var data = [
+      {name: 'Bob', city: 'San Francisco', street: '333 West Wacker Drive', phone: '321-7654' },
+      {name: 'John', city: 'LA', street: '3 East 2nd Drive', phone: '321-7654' },
+      {name: 'Steve', city: 'Austin', street: '53 1st Street', phone: '321-7654' }
+    ];
     return (
       <div id="dashboard">
         <h1>Dashboard</h1>
@@ -28,34 +45,15 @@ class Dashboard extends Component {
             <button type="button" className="btn btn-success">+</button>
             </div>
           </div>
-          <div id="table" class="dasboard-container-children">
-            <table>
-              <tr>
-                <th>Price</th>
-                <th>Visits</th>
-                <th>Conversions</th>
-                <th>Profit</th>
-              </tr>
-              <tr>
-                <td>$1.25</td>
-                <td>1000</td>
-                <td>60</td>
-                <td>73.20</td>
-              </tr>
-              <tr>
-                <td>$0.90</td>
-                <td>1000</td>
-                <td>10</td>
-                <td>$87.00</td>
-              </tr>
-              <tr>
-                <td>$1.25</td>
-                <td>1000</td>
-                <td>140</td>
-                <td>$65.80</td>
-              </tr>
-            </table>
-          </div>
+          <DataTable
+            className="container"
+            keys="id"
+            columns={tableColumns}
+            initialData={data}
+            initialPageLength={5}
+            initialSortBy={{ prop: 'city', order: 'descending' }}
+            pageLengthOptions={[ 5, 20, 50 ]}
+          />
         </div>
       </div>
     );
