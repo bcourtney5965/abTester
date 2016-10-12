@@ -6,7 +6,6 @@ class Dashboard extends Component {
       <div id="dashboard">
         <h1>Dashboard</h1>
         <div id="dasboard-container">
-          dasboard-container
           <div id="controls" class="dasboard-container-children">
             <fieldset>
                 <label className="selected">
