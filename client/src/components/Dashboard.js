@@ -15,15 +15,15 @@ class Dashboard extends Component {
       ];
 
     var data = [
-      {name: 'Bob', city: 'San Francisco', street: '333 West Wacker Drive', phone: '321-7654' },
-      {name: 'John', city: 'LA', street: '3 East 2nd Drive', phone: '321-7654' },
-      {name: 'Steve', city: 'Austin', street: '53 1st Street', phone: '321-7654' }
+      {id: 1, name: 'Bob', city: 'San Francisco', street: '333 West Wacker Drive', phone: '321-7654' },
+      {id: 2, name: 'John', city: 'LA', street: '3 East 2nd Drive', phone: '321-7654' },
+      {id: 3, name: 'Steve', city: 'Austin', street: '53 1st Street', phone: '321-7654' }
     ];
     return (
       <div id="dashboard">
         <h1>Dashboard</h1>
         <div id="dasboard-container">
-          <div id="controls" class="dasboard-container-children">
+          <div id="controls" className="dasboard-container-children">
             <fieldset>
                 <label className="selected">
                   Working
@@ -53,6 +53,7 @@ class Dashboard extends Component {
             initialPageLength={5}
             initialSortBy={{ prop: 'city', order: 'descending' }}
             pageLengthOptions={[ 5, 20, 50 ]}
+            key={data.id}
           />
         </div>
       </div>
