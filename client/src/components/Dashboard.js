@@ -1,4 +1,9 @@
 import React, { Component } from 'react';
+var ideas = [
+  {"pic": "pic", "name": "abTester", "profit": "$3,600", "confidence": "80%", "lastUpdate": "10/26/2016 10:30 PM"},
+  {"pic": "pic", "name": "Funding Match-Maker", "profit": "$5,600", "confidence": "62%", "lastUpdate": "08/23/2016 08:12 AM"},
+  {"pic": "pic", "name": "Automated Real Estate Finder", "profit": "$2,700", "confidence": "82%", "lastUpdate": "03/17/2016 03:39 PM"}
+]
 
 class DashboardTableRow extends Component {
   constructor(props) {
@@ -21,8 +26,8 @@ class DashboardTableRow extends Component {
 }
 
 class DashboardTable extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       test: "it works"
     }
@@ -40,24 +45,23 @@ class DashboardTable extends Component {
           </tr>
         </thead>
         <tbody>
-          <DashboardTableRow idea={ideas} />
+          {
+            this.props.ideas.map((idea, index, array) => {
+              return <DashboardTableRow idea={idea} key={index} />
+            })
+          }
         </tbody>
       </table>
     );
   }
 }
 
-var ideas = [
-  {"pic": "pic", "name": "abTester", "profit": "$3,600", "confidence": "80%", "lastUpdate": "10/26/2016 10:30 PM"},
-  // {"pic": "pic", "name": "Funding Match-Maker", "profit": "$5,600", "confidence": "62%", "lastUpdate": "08/23/2016 08:12 AM"},
-  // {"pic": "pic", "name": "Automated Real Estate Finder", "profit": "$2,700", "confidence": "82%", "lastUpdate": "03/17/2016 03:39 PM"}
-]
 
 class Dashboard extends Component {
   constructor() {
     super();
     this.state = {
-      test: "this works"
+      test: "This data is displaying dynamically"
     }
   }
   render() {
