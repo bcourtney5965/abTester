@@ -3,7 +3,7 @@ import { Router, Route, browserHistory, IndexRoute} from 'react-router'
 // import ReactDOM from 'react-dom';
 import { render } from 'react-dom'
 import App from './App';
-import Dashboard from './views/dashboard/Dashboard.js';
+import Dashboard from './views/dashboard';// don't need "/index.js", since its functions as the default 
 import View1 from './views/View1';
 import View2 from './views/View2';
 import Login from './views/Login';
