@@ -8,12 +8,21 @@ import View1 from './views/View1';
 import View2 from './views/View2';
 import Login from './views/Login';
 
+import All from './views/dashboard/All';
+import Mature from './views/dashboard/Mature';
+import Premature from './views/dashboard/Premature';
+
 render((
   <Router history={browserHistory}>
     <Route path="/" component={App}>
       <IndexRoute component={Dashboard}/>
       <Route path="view1" component={View1}/>
-      <Route path="dashboard" component={Dashboard}/>
+      { /*<Route path="dashboard" component={Dashboard}/> */}
+      <Route path="dashboard" component={Dashboard}>
+        <Route path="all" component={All}/>
+        <Route path="mature" component={Mature}/>
+        <Route path="premature" component={Premature}/>
+      </Route>
       <Route path="view2" component={View2}/>
       <Route path="login" component={Login}/>
     </Route>
