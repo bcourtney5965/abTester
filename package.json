@@ -1,0 +1,19 @@
+{
+  "name": "abtester",
+  "version": "1.0.0",
+  "description": "App for testing ideas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bcourtney5965/abTester.git"
+  },
+  "author": "Brandon Courtney",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bcourtney5965/abTester/issues"
+  },
+  "homepage": "https://github.com/bcourtney5965/abTester#readme"
+}
